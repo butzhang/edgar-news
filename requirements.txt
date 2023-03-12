@@ -5,5 +5,15 @@ flask-bootstrap
 flask-sqlalchemy
 sqlalchemy-serializer
 dynaconf
-click
 flask-restful
+click
+itsdangerous
+Jinja2
+MarkupSafe
+python-dotenv
+Werkzeug
+sec-edgar-api
+feedparser
+langchain
+openai
+chromadb
