@@ -1,8 +1,8 @@
 import click
 
-from project_name.ext.auth import create_user
-from project_name.ext.database import db
-from project_name.models import Product
+from edgar_news.ext.auth import create_user
+from edgar_news.ext.database import db
+from edgar_news.models import Product
 
 
 def create_db():
