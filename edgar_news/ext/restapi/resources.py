@@ -33,3 +33,7 @@ class ProductItemResource(Resource):
     def get(self, product_id):
         product = Product.query.filter_by(id=product_id).first() or abort(404)
         return jsonify(product.to_dict())
+    
+class EdgarLastestFilings(Resource):
+    def get(self):
+        return jsonify({"edgar": "latest_filings"})

@@ -3,10 +3,13 @@ from flask_simplelogin import login_required
 
 from edgar_news.models import Product
 
+from edgar_news.ext.handlers.edgar_lastest_filing import get_lastest_filings
+
 
 def index():
     products = Product.query.all()
-    return render_template("index.html", products=products)
+    info = get_lastest_filings()
+    return render_template("index.html", products=products, info=info)
 
 
 def product(product_id):
