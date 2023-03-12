@@ -18,9 +18,7 @@ def drop_db():
 def populate_db():
     """Populate db with sample data"""
     data = [
-        Product(
-            id=1, name="Ciabatta", price="10", description="Italian Bread"
-        ),
+        Product(id=1, name="Ciabatta", price="10", description="Italian Bread"),
         Product(id=2, name="Baguete", price="15", description="French Bread"),
         Product(id=3, name="Pretzel", price="20", description="German Bread"),
     ]

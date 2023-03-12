@@ -8,9 +8,7 @@ from edgar_news.models import Product
 class ProductResource(Resource):
     def get(self):
         products = Product.query.all() or abort(204)
-        return jsonify(
-            {"products": [product.to_dict() for product in products]}
-        )
+        return jsonify({"products": [product.to_dict() for product in products]})
 
     @login_required(basic=True, username="admin")
     def post(self):
@@ -33,7 +31,8 @@ class ProductItemResource(Resource):
     def get(self, product_id):
         product = Product.query.filter_by(id=product_id).first() or abort(404)
         return jsonify(product.to_dict())
-    
+
+
 class EdgarLastestFilings(Resource):
     def get(self):
         return jsonify({"edgar": "latest_filings"})
