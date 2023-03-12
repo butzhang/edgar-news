@@ -17,6 +17,11 @@ feedparser
 langchain
 openai
 chromadb
+Celery
+redis
+pika
+beautifulsoup4
+lxml
 
 #
 pytest
